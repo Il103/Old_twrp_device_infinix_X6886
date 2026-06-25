@@ -55,7 +55,6 @@ mka vendorbootimage
 └── mtk_plpath_utils/       # MTK postinstall
 ```
 
-## Credits
+## Maintainer
 
-- **rey-early** - base device tree
-- **Mahiroo** - kernel and vendor blobs
+**BERU**
