@@ -118,11 +118,27 @@ TW_BRIGHTNESS_PATH := "/sys/class/leds/lcd-backlight/brightness"
 TW_DEFAULT_BRIGHTNESS := 10
 TW_MAX_BRIGHTNESS := 255
 
+# Flashlight Support
+TW_FLASH_LIGHT_PATH := "/sys/class/leds/torch-light/brightness"
+
+# Settings Persistence (/data/recovery)
+TW_DATA_RECOVERY := true
+
+# FRP Addon Support
+TW_INCLUDE_FRP := true
+
+# KernelSU Support
+TW_INCLUDE_KERNELSU := true
+
 # Crypto
 TW_INCLUDE_CRYPTO := true
 TW_INCLUDE_CRYPTO_FBE := true
 TW_INCLUDE_FBE_METADATA_DECRYPT := true
 BOARD_USES_METADATA_PARTITION := true
+TW_CRYPTO_USE_SYSTEM_VOLD := true
+TW_CRYPTO_USE_FBE := true
+BOARD_SUPPRESS_SECURE_ERASE := true
+TW_CRYPTO_SYSTEM_VOLD := true
 PLATFORM_VERSION := 16.1.0
 PLATFORM_SECURITY_PATCH := 2099-12-31
 VENDOR_SECURITY_PATCH := 2099-12-31

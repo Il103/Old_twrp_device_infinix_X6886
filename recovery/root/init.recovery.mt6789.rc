@@ -16,6 +16,10 @@ on fs
 
 on boot
     setprop sys.usb.config adb
+    setprop debug.sf.hw 1
+    setprop debug.egl.hw 1
+    setprop ro.surface_flinger.max_fps 144
+    setprop ro.surface_flinger.refresh_rate 144
 
 on post-fs-data
     start health-hal-2-1

@@ -6,6 +6,16 @@ ro.sys.usb.storage.type=mtp
 
 # Crypto
 ro.crypto.volume.filenames_mode=aes-256-cts
+ro.crypto.type=file
+
+# 144Hz Display
+ro.surface_flinger.max_fps=144
+ro.surface_flinger.refresh_rate=144
+debug.sf.hw=1
+debug.egl.hw=1
+
+# FRP
+ro.frp.pst=/dev/block/by-name/frp
 
 # Gatekeeper
 ro.hardware.gatekeeper=trustonic
