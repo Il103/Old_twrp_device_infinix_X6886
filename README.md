@@ -1,22 +1,20 @@
-# OrangeFox Recovery Device Tree — Infinix X6886
+# OrangeFox Recovery - Infinix X6886 (Hot 60 Pro Plus)
 
 | Feature | Value |
 |---------|-------|
 | CPU | MediaTek Helio G200 (MT6789) |
-| Platform | transsion_mt6789 |
 | Architecture | arm64-v8a |
-| Android | 12 (SDK 32) |
-| Kernel cmdline | `bootopt=64S3,32N2,64N2` |
+| Android | 12 (SDK 31) |
 | Boot header | v4 (vendor_boot) |
-| A/B | Yes (Virtual A/B + compression) |
-| Encryption | FBE v2 (aes-256-xts:aes-256-cts) + inlinecrypt |
-| Userdata fs | f2fs |
+| A/B | Virtual A/B + compression |
+| Encryption | FBE v2 (aes-256-xts + inlinecrypt) |
+| Userdata | f2fs |
 | Dynamic partitions | Yes |
 
 ## Build
 
 ```bash
 . build/envsetup.sh
-lunch fox_X6886-eng
-mka recoveryimage
+lunch ofox_X6886-eng
+mka vendorbootimage
 ```
