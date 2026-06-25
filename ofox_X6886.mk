@@ -15,3 +15,10 @@ PRODUCT_MODEL := Infinix X6886
 PRODUCT_MANUFACTURER := INFINIX
 
 PRODUCT_GMS_CLIENTID_BASE := android-infinix
+
+# OrangeFox Branding - Team B E R U
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.ofox.version=R12.1 \
+    ro.ofox.build_type=Team-BERU \
+    ro.ofox.maintainer=BERU \
+    ro.ofox.device=X6886

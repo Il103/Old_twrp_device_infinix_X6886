@@ -124,6 +124,18 @@ TW_FLASH_LIGHT_PATH := "/sys/class/leds/torch-light/brightness"
 # Settings Persistence (/data/recovery)
 TW_DATA_RECOVERY := true
 
+# OrangeFox Branding - Team B E R U
+# This will show in About screen as:
+# Version: R12.1
+# Build type: Team-BERU
+# Device: X6886
+# Maintainer: BERU
+FOX_VERSION := R12.1
+FOX_BUILD_TYPE := Team-BERU
+FOX_MAINTAINER := BERU
+FOX_DEVICE := X6886
+FOX_SKIP_CHECK := true
+
 # FRP Addon Support
 TW_INCLUDE_FRP := true
 
