@@ -31,8 +31,12 @@ tr_overlayfs		/tr_overlayfs		erofs		ro										wait,slotselect,logical,nofail
 
 # MTK specific partitions
 /dev/block/by-name/nvdata	/nvdata		ext4		noatime,nosuid,nodev														wait,check,formattable,nofail
+/dev/block/by-name/nvcfg		/nvcfg			ext4		noatime,nosuid,nodev,noauto_da_alloc,commit=1,nodelalloc		wait,check,nofail
+/dev/block/by-name/persist		/persist		ext4		noatime,nosuid,nodev,noauto_da_alloc,commit=1,nodelalloc		wait,check,nofail
 /dev/block/by-name/protect1	/protect1	ext4		noatime,nosuid,nodev														wait,check,nofail
 /dev/block/by-name/protect2	/protect2	ext4		noatime,nosuid,nodev														wait,check,nofail
+/dev/block/by-name/logo		/logo			emmc		defaults																defaults,nofail
+/dev/block/by-name/expdb		/expdb			emmc		defaults																defaults,nofail
 /dev/block/by-name/seccfg	/seccfg		emmc		defaults																defaults,nofail
 
 # Need to have this entry in here even though the mount point itself is no longer needed.
