@@ -25,7 +25,6 @@ AB_OTA_PARTITIONS += \
     boot \
     dtbo \
     lk \
-    odm \
     odm_dlkm \
     product \
     system \
@@ -106,6 +105,16 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES_DEBUG += \
     update_engine_client
+
+# Extra tools for recovery
+PRODUCT_PACKAGES += \
+    bash \
+    nano \
+    lz4 \
+    lzma \
+    openssh-sftp-server \
+    pigz \
+    strace
 
 # Additional configs
 TW_RECOVERY_ADDITIONAL_RELINK_LIBRARY_FILES += \

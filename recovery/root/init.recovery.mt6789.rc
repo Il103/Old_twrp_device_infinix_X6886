@@ -20,6 +20,14 @@ on boot
     setprop debug.egl.hw 1
     setprop ro.surface_flinger.max_fps 144
     setprop ro.surface_flinger.refresh_rate 144
+    setprop ro.vendor.display.default_fps 120
+    setprop ro.vendor.display.refresh_rate 144
+    setprop ro.vendor.display.hwc.dfs_composition 1
+    setprop persist.vendor.power.whitelist 120,144
+    setprop debug.sf.fps 120
+    setprop ro.vendor.display.peak_fps 144
+    setprop ro.vendor.display.dynamic_fps 120,144
+    setprop ro.vendor.display.available_fps 60,90,120,144
 
 on post-fs-data
     start health-hal-2-1

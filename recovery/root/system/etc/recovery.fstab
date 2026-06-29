@@ -23,10 +23,17 @@ tr_company			/tr_company		ext4		ro																	wait,slotselect,logical,nofai
 tr_carrier			/tr_carrier		ext4		ro																	wait,slotselect,logical,nofail
 tr_product			/tr_product		erofs		ro																	wait,slotselect,logical,nofail
 tr_preload			/tr_preload		erofs		ro																	wait,slotselect,logical,nofail
-
+tr_overlayfs		/tr_overlayfs		erofs		ro										wait,slotselect,logical,nofail
 # Userdata partition
-/dev/block/by-name/metadata	/metadata		ext4		noatime,nosuid,nodev,discard														wait,check,formattable
+/dev/block/by-name/metadata	/metadata		ext4		noatime,nosuid,nodev,discard											wait,check,formattable
+# Userdata partition
 /dev/block/by-name/userdata	/data			f2fs		noatime,nosuid,nodev,discard,noflush_merge,fsync_mode=nobarrier,reserve_root=134217,resgid=1065,inlinecrypt				wait,check,formattable,quota,fileencryption=aes-256-xts:aes-256-cts:v2+inlinecrypt_optimized,keydirectory=/metadata/vold/metadata_encryption
+
+# MTK specific partitions
+/dev/block/by-name/nvdata	/nvdata		ext4		noatime,nosuid,nodev														wait,check,formattable,nofail
+/dev/block/by-name/protect1	/protect1	ext4		noatime,nosuid,nodev														wait,check,nofail
+/dev/block/by-name/protect2	/protect2	ext4		noatime,nosuid,nodev														wait,check,nofail
+/dev/block/by-name/seccfg	/seccfg		emmc		defaults																defaults,nofail
 
 # Need to have this entry in here even though the mount point itself is no longer needed.
 # The update_engine code looks for this entry in order to determine the boot device address
