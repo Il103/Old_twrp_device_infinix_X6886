@@ -83,7 +83,8 @@ BOARD_DTBOIMAGE_PARTITION_SIZE := 8388608
 BOARD_SUPER_PARTITION_SIZE := 9126805504
 BOARD_SUPER_PARTITION_GROUPS := infinix_dynamic_partitions
 BOARD_INFINIX_DYNAMIC_PARTITIONS_SIZE := 9122611200
-BOARD_INFINIX_DYNAMIC_PARTITIONS_PARTITION_LIST := system system_ext vendor product odm_dlkm vendor_dlkm
+BOARD_INFINIX_DYNAMIC_PARTITIONS_PARTITION_LIST := system system_ext vendor product odm_dlkm vendor_dlkm \
+    tr_mi tr_theme tr_region tr_company tr_carrier tr_product tr_preload tr_overlayfs
 
 BOARD_SYSTEMIMAGE_FILE_SYSTEM_TYPE := erofs
 BOARD_SYSTEM_EXTIMAGE_FILE_SYSTEM_TYPE := erofs
