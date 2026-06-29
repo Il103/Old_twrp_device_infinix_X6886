@@ -110,7 +110,6 @@ PRODUCT_PACKAGES_DEBUG += \
 PRODUCT_PACKAGES += \
     bash \
     nano \
-    lz4 \
     lzma \
     openssh-sftp-server \
     pigz \
