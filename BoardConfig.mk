@@ -1,4 +1,4 @@
-DEVICE_PATH := device/transsion/x6886/twrp
+DEVICE_PATH := device/transsion/X6886
 
 # Architecture
 TARGET_ARCH := arm64

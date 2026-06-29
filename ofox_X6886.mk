@@ -1,4 +1,4 @@
-$(call inherit-product, device/transsion/x6886/twrp/device.mk)
+$(call inherit-product, device/transsion/X6886/device.mk)
 
 PRODUCT_NAME := ofox_X6886
 PRODUCT_DEVICE := X6886
