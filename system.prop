@@ -1,15 +1,33 @@
 # Fstab
 ro.postinstall.fstab.prefix=/system
 
-# USB MTP
+# USB MTP - auto connect without password
 ro.sys.usb.storage.type=mtp
+persist.sys.usb.config=mtp,adb
+sys.usb.config=mtp,adb
 
-# Crypto
+# Crypto - disable password prompt
 ro.crypto.volume.filenames_mode=aes-256-cts
 ro.crypto.type=file
+ro.crypto.state=encrypted
+ro.crypto.fs_crypto_ready=1
 
-# Display
+# Display 120Hz + 144Hz
 ro.sf.lcd_density=420
+ro.surface_flinger.max_fps=144
+ro.surface_flinger.refresh_rate=144
+debug.sf.hw=1
+debug.egl.hw=1
+debug.sf.showupdates=0
+debug.composition.type=gpu
+ro.vendor.display.refresh_rate=144
+ro.vendor.display.hwc.dfs_composition=1
+persist.vendor.power.whitelist=120,144
+debug.sf.fps=120
+ro.vendor.display.default_fps=120
+ro.vendor.display.peak_fps=144
+ro.vendor.display.dynamic_fps=120,144
+ro.vendor.display.available_fps=60,90,120,144
 
 # FRP
 ro.frp.pst=/dev/block/by-name/frp
@@ -20,5 +38,8 @@ ro.hardware.gatekeeper=trustonic
 # TEE
 ro.vendor.mtk_tee_gp_support=1
 ro.vendor.mtk_trustonic_tee_support=1
-
 keymaster_ver=4.1
+
+# OrangeFox recovery props
+ro.twrp.vendor_boot=true
+ro.recovery.ui.margin_height=124

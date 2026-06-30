@@ -1,0 +1,35 @@
+# Device-specific recovery init for Infinix X6886 (MT6789)
+# This file must exist - imported by init.recovery.mt6789.rc
+
+on early-init
+    write /proc/sys/kernel/panic 0
+    write /proc/sys/kernel/panic_on_oops 0
+    write /proc/sys/kernel/panic_on_rcu_stall 0
+    write /proc/sys/kernel/panic_on_warn 0
+
+on init
+    # Set up MTK-specific device nodes and symlinks
+    symlink /dev/block/platform/soc/11270000.ufshci /dev/block/bootdevice
+
+    # Storage paths
+    mkdir /metadata 0771 root root
+    mkdir /data 0771 root root
+    mkdir /persist 0771 root root
+    mkdir /nvdata 0771 root root
+
+on fs
+    # Mount critical partitions
+    mount tmpfs tmpfs /metadata mode=0755
+
+on post-fs
+    # Set permissions for ADB
+    setprop persist.sys.usb.config mtp,adb
+    setprop sys.usb.config mtp,adb
+    setprop sys.usb.ffs.aio_compat 0
+    write /sys/class/android_usb/android0/enable 1
+
+on boot
+    # Enable USB
+    setprop sys.usb.controller musb-hdrc
+    setprop sys.usb.configfs 1
+    write /sys/class/android_usb/android0/enable 1
