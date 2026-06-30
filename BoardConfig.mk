@@ -20,7 +20,7 @@ TARGET_NO_BOOTLOADER := true
 
 # Platform
 TARGET_BOARD_PLATFORM := mt6789
-TARGET_BOARD_PLATFORM_GPU := mali-g52 mc1
+TARGET_BOARD_PLATFORM_GPU := mali-g57 mc2
 
 # Kernel
 BOARD_KERNEL_CMDLINE := bootopt=64S3,32N2,64N2 androidboot.hardware=mt6789
