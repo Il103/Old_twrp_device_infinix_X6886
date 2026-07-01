@@ -14,6 +14,9 @@ TARGET_2ND_CPU_ABI := armeabi-v7a
 TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := generic
 
+# 64-bit
+TARGET_SUPPORTS_64_BIT_APPS := true
+
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := Infinix-X6886
 TARGET_NO_BOOTLOADER := true
@@ -109,6 +112,8 @@ TARGET_COPY_OUT_VENDOR_DLKM := vendor_dlkm
 TARGET_COPY_OUT_ODM_DLKM := odm_dlkm
 
 # === OrangeFox R12.1 Material UI Configuration ===
+TARGET_SCREEN_WIDTH := 1080
+TARGET_SCREEN_HEIGHT := 2408
 TW_THEME := portrait_hdpi
 TW_EXTRA_LANGUAGES := true
 TW_SCREEN_BLANK_ON_BOOT := true
